@@ -1,0 +1,17 @@
+{% extends 'djoba/index.html' %}
+{% block content %}
+	<div>
+		<form method='post' action="{% url 'register' %}">
+			{% if form.errors %}
+				<p>There's an error!</p>
+			{% endif %}
+			{% csrf_token %}
+
+
+			{{form}}
+
+			<input type="submit" value='register'>
+		</form>
+
+	</div>
+{% endblock %}
