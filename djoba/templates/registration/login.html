@@ -9,8 +9,11 @@
 			{% csrf_token %}
 			<p>Username: {{form.username}} </p>
 			<p>Password: {{form.password}} </p>
-			<input type="submit" value='login'>
+			<button class='btn' type='submit' value='Log In'>Log In</button>
 			<input type="hidden" value='{{next}}'>
+		</form>
+		<form method='get' action="{% url 'register' %}">
+			<button class='btn' type='submit' value='Register'>Register</button>
 		</form>
 
 	</div>
