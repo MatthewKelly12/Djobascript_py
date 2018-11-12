@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+# from __future__ import unicode_literals
+
+
+from djoba.models import Title, Job, Language, Framework
+
+
+
+admin.site.register(Title)
+admin.site.register(Job)
+admin.site.register(Language)
+admin.site.register(Framework)
