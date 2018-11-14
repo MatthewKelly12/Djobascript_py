@@ -6,11 +6,17 @@
 {% for job in jobs %}
 <div class='centered'>
 		<h1>{{job.company_name}}</h1>
-		<h3>{{job.date_added}}</h3>
-		<h3>{{job.title}}</h3>
-		<h3>{{job.language}}</h3>
-		<h3>{{job.framework}}</h3>
-		<h3>{{job.description}}</h3>
+		<h4>Job Title:</h4>{{job.title}}
+		<h4>Languages:</h4>
+		{% for languages in job.language.all %}
+			  {{languages.name}}
+		{% endfor %}
+		<h4>Frameworks:</h4>
+		{% for frameworks in job.framework.all %}
+			  {{frameworks.name}}
+		{% endfor %}
+		<h4>Job Description:</h4> {{job.description}}
+		<h4>Date Applied:</h4>{{job.date_added}}
 </div>
 {% endfor %}
 {% endblock content %}
