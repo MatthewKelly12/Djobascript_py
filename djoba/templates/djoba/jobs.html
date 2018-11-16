@@ -5,20 +5,10 @@
 {% include 'djoba/nav.html' with nav_location=view.location %}
 {% for job in jobs %}
 <div class='centered'>
-			<h1>{{job.company_name}}</h1>
-		<!-- <h4>Job Title:</h4>{{job.title}}
-		<h4>Languages:</h4>
-		{% for languages in job.language.all %}
-			  {{languages.name}}
-		{% endfor %}
-		<h4>Frameworks:</h4>
-		{% for frameworks in job.framework.all %}
-			  {{frameworks.name}}
-		{% endfor %}
-		<h4>Job Description:</h4> {{job.description}} -->
+		<h1>{{job.company_name}}</h1>
 		<h4>Date Applied:</h4>{{job.date_added}}
 		<form method='get' action="{% url 'job_details' pk=job.id %}">
-			<input type='submit' value='Job Details'>
+			<button class='btn'type='submit' value='Job Details'>Job Details</button>
 		</form>
 </div>
 {% endfor %}
