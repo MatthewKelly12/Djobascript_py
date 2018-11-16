@@ -1,0 +1,28 @@
+{%  extends 'djoba/index.html' %}
+{% load staticfiles %}
+
+{% block content %}
+{% include 'djoba/nav.html' with nav_location=view.location %}
+{% for prop in job %}
+<div class='centered'>
+		<h1>{{prop.company_name}}</h1>
+		<h4>Job Title:</h4>{{prop.title}}
+		<h4>Languages:</h4>
+		{% for languages in prop.language.all %}
+			  {{languages.name}}
+		{% endfor %}
+		<h4>Frameworks:</h4>
+		{% for frameworks in prop.framework.all %}
+			  {{frameworks.name}}
+		{% endfor %}
+		<h4>Job Description:</h4> {{prop.description}}
+		<h4>Date Applied:</h4> {{prop.date_added}}
+</div>
+{% endfor %}
+{% endblock content %}
+
+
+
+
+
+
