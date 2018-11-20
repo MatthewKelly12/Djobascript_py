@@ -1,0 +1,22 @@
+{%  extends 'djoba/index.html' %}
+{% load staticfiles %}
+
+{% block content %}
+{% include 'djoba/nav.html' with nav_location=view.location %}
+<!-- {% for job in jobs %} -->
+<div class='centered'>
+		<!-- <h1>{{job.company_name}}</h1>
+		<h4>Date Applied:</h4>{{job.date_added}}
+		<form method='get' action="{% url 'job_details' pk=job.id %}">
+			<button class='btn'type='submit' value='Job Details'>Job Details</button>
+		</form> -->
+		<h1>CONTACTS WORKING</h1>
+</div>
+<!-- {% endfor %} -->
+{% endblock content %}
+
+
+
+
+
+
