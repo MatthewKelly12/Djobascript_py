@@ -3,14 +3,21 @@
 
 {% block content %}
 {% include 'djoba/nav.html' with nav_location=view.location %}
+<div>
+	<form method='get' action='/new_contact'>
+		<button class='btn'type='submit' value='Add Contact'>Add Contact</button>
+	</form>
+</div>
 {% for contact in contacts %}
 <div class='centered'>
 		<h1>{{contact.name}}</h1>
 		<h4>Company:</h4>{{contact.company_name}}
 		<h4>Date Added:</h4>{{contact.date_added}}
-		<form method='get' action="{% url 'contact_details' pk=contact.id %}">
-			<button class='btn'type='submit' value='Contact Details'>Contact Details</button>
-		</form>
+		<p>
+			<form method='get' action="{% url 'contact_details' pk=contact.id %}">
+				<button class='btn'type='submit' value='Contact Details'>Contact Details</button>
+			</form>
+		</p>
 </div>
 {% endfor %}
 {% endblock content %}

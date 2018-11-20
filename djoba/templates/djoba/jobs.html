@@ -3,13 +3,20 @@
 
 {% block content %}
 {% include 'djoba/nav.html' with nav_location=view.location %}
+<div>
+	<form method='get' action='/new_job'>
+		<button class='btn'type='submit' value='Add Job'>Add Job</button>
+	</form>
+</div>
 {% for job in jobs %}
 <div class='centered'>
 		<h1>{{job.company_name}}</h1>
 		<h4>Date Applied:</h4>{{job.date_added}}
-		<form method='get' action="{% url 'job_details' pk=job.id %}">
-			<button class='btn'type='submit' value='Job Details'>Job Details</button>
-		</form>
+		<p>
+			<form method='get' action="{% url 'job_details' pk=job.id %}">
+				<button class='btn'type='submit' value='Job Details'>Job Details</button>
+			</form>
+		</p>
 </div>
 {% endfor %}
 {% endblock content %}
