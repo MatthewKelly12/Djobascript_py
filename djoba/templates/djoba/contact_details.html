@@ -1,0 +1,23 @@
+{%  extends 'djoba/index.html' %}
+{% load staticfiles %}
+
+{% block content %}
+{% include 'djoba/nav.html' with nav_location=view.location %}
+{% for prop in contact %}
+<div class='centered'>
+		<h1>{{prop.name}}</h1>
+		<h4>Company: {{prop.company_name}}</h4>
+		<h4>Email: {{prop.email}}</h4>
+		<h4>Phone: {{prop.phone}}</h4>
+		<h4>Job Title:</h4>{{prop.title}}
+		<h4>Notes:</h4> {{prop.description}}
+		<h4>Date Added:</h4> {{prop.date_added}}
+</div>
+{% endfor %}
+{% endblock content %}
+
+
+
+
+
+
