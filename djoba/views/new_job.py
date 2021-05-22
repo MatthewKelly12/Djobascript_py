@@ -17,8 +17,8 @@ def new_job(request):
 			job = job_form.save(commit=False)
 			job.user = request.user
 			job.save()
-			print(job.id)
-			print(job.company_name)
+		else:
+			print('Did Not Save')
 
 		url = 'jobs'
 		return redirect(url)

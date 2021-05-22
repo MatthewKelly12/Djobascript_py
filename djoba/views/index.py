@@ -8,3 +8,5 @@ def index(request):
 		return render(request, template)
 	else:
 		return redirect('login')
+
+

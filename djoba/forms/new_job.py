@@ -1,6 +1,6 @@
 from django import forms
 from djoba.models import Job
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 
 
