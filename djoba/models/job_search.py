@@ -5,8 +5,8 @@ from .title import Title
 from django.contrib.auth.models import User
 
 class JobSearch(models.Model):
-	ACTIVE = 'ACTIVE'
-	INACTIVE = 'INACTIVE'
+	ACTIVE = 'Active'
+	INACTIVE = 'Inactive'
 	STATUS_CHOICES = [(ACTIVE,'Active'),(INACTIVE,'Inactive')]
 
 	user = models.ForeignKey(User,on_delete=models.CASCADE)

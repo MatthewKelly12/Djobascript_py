@@ -5,9 +5,12 @@
 {% include 'djoba/nav.html' with nav_location=view.location %}
 {% for search in searches %}
 <div class="containter">
-	<div class="card mx-auto" style="width: 18rem;">
+	<div class="card mx-auto justify-content-center" style="width: 18rem;">
 		<div>
 			<h2>{{ search.name }} : {{ search.status }}</h2>
+			<div class="card justify-content-center" >
+				<a type="submit" class="btn btn-primary p-3" href="{% url 'job_search' pk=search.id %}">Details</a>
+			</div>
 		</div>
 	</div>
 </div>

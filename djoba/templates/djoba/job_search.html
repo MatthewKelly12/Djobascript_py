@@ -3,8 +3,9 @@
 
 {% block content %}
 {% include 'djoba/nav.html' with nav_location=view.location %}
+{% for prop in search%}
 <div class="container-sm mx-auto d-flex justify-content-center border m-3" >
-	<h2>i2i Layoff: Active</h2>
+	<h2>{{prop.name}} : </h2>  <h2>{{prop.status}}</h2>
 </div>
 <div class="container-sm  d-flex justify-content-center p-3">
 	<div class="card p-3">
@@ -16,10 +17,8 @@
 			<a type="submit" class="btn btn-success p-3" href="{% url 'contacts' %}">Add +</a>
 		</div>
 	</div>
-	<!-- <div class="card p-3">Contacts: 8</div>
-	<div class="card p-3">Companies: 6</div> -->
-	<!-- <div class="card">Communication: </div> -->
 </div>
+{% endfor %}
 
 {% endblock content %}
 
