@@ -8,3 +8,4 @@ from .get_contacts import get_contacts
 from .contact_details import contact_details
 from .new_contact import new_contact
 from .job_search import job_search
+from .dashboard import dashboard
