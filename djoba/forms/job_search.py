@@ -7,4 +7,4 @@ class JobSearchForm(forms.ModelForm):
 	class Meta:
 		model = JobSearch
 		fields = ['name', 'reason','date_created']
-		exclude = ['user']
+		exclude = ['user','date_ended']

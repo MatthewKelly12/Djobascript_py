@@ -3,18 +3,15 @@
 
 {% block content %}
 {% include 'djoba/nav.html' with nav_location=view.location %}
+{% for search in searches %}
 <div class="containter">
 	<div class="card mx-auto" style="width: 18rem;">
 		<div>
-			<h1>NSS Graduation</h1>
-		</div>
-	</div>
-	<div class="card mx-auto" style="width: 18rem;">
-		<div>
-			<h1>i2i Layoff</h1>
+			<h1>{{ search.name }}</h1>
 		</div>
 	</div>
 </div>
+{% endfor %}
 {% endblock content %}
 
 
