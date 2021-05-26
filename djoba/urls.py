@@ -11,5 +11,5 @@ urlpatterns = [
 	path('contacts/', views.get_contacts, name='contacts'),
 	path('contact_details/<int:pk>', views.contact_details, name='contact_details'),
 	path('new_contact/', views.new_contact, name='new_contact'),
-	path('current_search/', views.current_search,name='current_search'),
+	path('job_search/', views.job_search,name='job_search'),
 ]

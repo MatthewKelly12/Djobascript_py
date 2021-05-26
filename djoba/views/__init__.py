@@ -7,4 +7,4 @@ from .new_job import new_job
 from .get_contacts import get_contacts
 from .contact_details import contact_details
 from .new_contact import new_contact
-from .current_search import current_search
+from .job_search import job_search
