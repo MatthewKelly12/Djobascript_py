@@ -3,7 +3,7 @@
 
 {% block content %}
 {% include 'djoba/nav.html' with nav_location=view.location %}
-{% for prop in search%}
+{% for prop in search %}
 <div class="container-sm mx-auto d-flex justify-content-center border m-3" >
 	<h2>{{prop.name}} : </h2>  <h2>{{prop.status}}</h2>
 </div>
@@ -13,7 +13,7 @@
 			<p>Jobs: {{job_count}}</p>
 		</div>
 		<div >
-			<a type="submit" class="btn btn-primary p-3" href="{% url 'jobs'  %}">View All</a>
+			<a type="submit" class="btn btn-primary p-3" href="{% url 'get_jobs' pk=prop.id %}">View All</a>
 			<a type="submit" class="btn btn-success p-3" href="{% url 'contacts' %}">Add +</a>
 		</div>
 	</div>

@@ -3,15 +3,8 @@ from djoba.models import Job
 from djoba.models import JobSearch
 from django.contrib.auth.models import User
 
-def get_jobs(request):
-	jobs = Job.objects.filter(user=request.user.id)
-	search_jobs = []
-	# searches = JobSearch.objects.filter(id=jobs.job_search_id)
-	# for job in jobs:
-	# 	if
-	# search = JobSearch.objects.filter(id=pk)
-	# job_count = Job.objects.filter(job_search_id=pk).count()
-	# print(job_count)
+def get_jobs(request,pk):
+	jobs = Job.objects.filter(user=request.user.id).filter(job_search_id=pk)
 	template = 'djoba/jobs.html'
 
 	return render(request, template, {'jobs': jobs})
